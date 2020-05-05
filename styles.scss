@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  --red:#C62828;
+  --blue:#5E86FF;
+  --purple:#6A1B9A;
+  --black:#252525;
+  justify-self: center;
+  align-self: center;
+}
+html{
+  display: grid;
+}
+
+body{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  width:100vw;
+  height: 100vh;
+  max-width: 2000px;
+  max-height: 900px ;
+  min-height: 700px;
+  min-width: 900px;
+}
+
+.feature{
+  height:100%;
+  display:grid;
+  grid-area:1/1/span 2/span 1;
+  width: 100%;
+  background-color: #5E86FF;
+  grid-template-rows: min-content min-content;
+  align-content: flex-end;
+  grid-gap: 10px;
+
+  .text-container{
+    justify-self: left;
+    align-self: end;
+    h2,h1{
+      justify-self: left;
+      padding-left:20px;
+      color: white;
+      align-self: end;
+    }
+    h2{
+      font-weight: normal;
+    }
+    h1{
+      font-family: 'Suez One', serif;
+      font-weight: normal;
+      font-size: 70px;
+    }
+      
+  }
+  img{
+    // width: 50vw;
+    width: 100%;
+    height: auto;
+    align-self: end;
+  }
+}
+
+.content{
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-rows: 40px auto auto auto;
+  align-content: start;
+  row-gap: 30px;
+  padding:10px 30px;
+  // margin:30px;
+  .socials{
+    display:grid;
+    grid-template-columns: auto auto;
+    column-gap:50px;
+    justify-content: end;
+    width: 100%;
+    a{
+      height:30px;
+      line-height: 30px;
+      width: auto;
+      text-decoration: none;
+      font-family: 'Suez One';
+      color:var(--blue);
+      img{
+        height:30px;
+        width: auto;
+      }
+    }
+  }
+  .lovely-message{
+    display:grid;
+    row-gap:5px;
+    justify-self: left;
+    p{
+      font-size:18px;
+      justify-self: left;
+      span{
+        color:var(--blue);
+        font-size:22px;
+        font-weight: bold;
+      }
+    }
+  }
+  .hashtag{
+    justify-self: left;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color:lightgrey;
+  }
+  hr{
+    width:90%;
+    height:2px;
+    background-color: lightgrey;
+  }
+}
+.question{
+  display:grid;
+  row-gap: 15px;
+  width:100%;
+  padding:0px 30px;
+  h4{
+    font-family: 'Suez One';
+    font-size:24px;
+    color:#171717;
+  }
+  p{
+    font-size: 20px;
+  }
+  textarea{
+    box-shadow: 0 1px 7px 2px #00000052;
+    width: 100%;
+    height: 50px;
+    padding:5px;
+  }
+  button{
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-size:20px;
+    padding:10px 30px;
+    cursor: pointer;
+  }
+}
