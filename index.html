@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>title</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="feature">
+      <div class="text-container">
+        <h2>You are now listening to Matt and Alex's</h2>
+        <h1>All Day Breakfast</h1>
+      </div>
+      <img src="banner.jpeg" alt="da boys">
+    </div>
+    <div class="content">
+      <div class="socials">
+        <a target="_blank" href="https://www.podcastoneaustralia.com.au/podcasts/all-day-breakfast">
+          Click To Listen
+        </a>
+        <a target='_blank' href="https://www.instagram.com/matt.and.alex/">
+          <img src="instagram.svg" alt="instagram"/>
+        </a>
+
+      </div>
+      <div class="lovely-message">
+        <p><span>W</span>ake up with Matt and Alex</p>
+        <p><span>A</span>lways there to listen to</p>
+        <p><span>N</span>ever miss an episode</p>
+        <p><span>K</span>rum proof comedy!</p>
+        <p><span>E</span>very day, new episodes</p>
+        <p><span>R</span>ight to your podcasting app</p>
+        <p><span>S</span>traight before, during and after coffee</p>
+      </div>
+      <p class="hashtag">
+        #mattandalexanalparty
+      </p>
+      <hr>
+    </div>
+    <div class="question"> 
+      <h4>Today's Question</h4>
+      <p id="question"></p>
+      <textarea id="answer"></textarea>
+      <button id="submit">Submit!</button>
+    </div>
+  </body>
+  <script>
+    var questions=[
+      'Like if I send you pics of my feet would that be weird or are you into that?',
+      'Do you think its bad if my toes are turning green?',
+      'How much would you be willing to donate to the Free Nation of Malex?',
+      'Can you lend your organs in case of an emergency?',
+      'Should Matt and Alex start an Only Fans?',
+      'Is it ever really appropriate to send toilet selfies while at grans funeral?',
+      'Reckon its a good idea if Alex just straight up sends a dick pick to a random number?',
+      'Curry powder in your tea, yes or no?' 
+    ]
+
+    function getQuestion(){
+      return questions[Math.floor(Math.random() * questions.length)];
+    }
+
+    document.querySelector('#question').innerHTML = getQuestion();
+
+    document.querySelector('#submit').onclick = function(){
+      document.querySelector("#answer").value = ''
+      document.querySelector('#question').innerHTML = getQuestion();
+    }
+  </script>
+</html>
